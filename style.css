@@ -1,97 +1,124 @@
 * {
-    box-sizing: border-box;   
-  }
-  body{
-    background-image: url("fundo.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .row{
-    margin-top: 100px;
-  }
-
-  /*A propriedade content é utilizada em conjunto com os pseudo-elementos ::after(depois) e 
-  ::before(antes) para inserir um conteúdo em um elemento que irá substituir o seu conteúdo original.
-  Depois da tabela será criado algo fixo, nesse caso o rodapé display:table */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  [class*="col-"] {
-    float: left;
-    padding: 15px;
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0; 
   }
   html {
-    font-family: "Lucida Sans", sans-serif;
+    scroll-behavior: smooth;
   }
-  .header {
-    background-color: #20120c;
-    color: #ffffff;
-    padding: 15px;
-  }
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .menu li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #e5bb33;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-  .menu li:hover {
-    background-color: #cc4100;
-  }
-  .aside {
-    background-color: #e56533;
-    padding: 15px;
-    color: #ffffff;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#fff;
+}
+h1 {
+    font-size: 38px;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px 80px 0 80px;
+    color: black;
+    padding-bottom: 20px;
+}
+header div {
+    margin: auto;
+    margin-left: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 20px;
+    list-style: none;
+    font-size: 20px; 
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+#inicio {
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    padding: 30px 80px;
+    background-image: url(dsc_0924.jpg);
+}
+#inicio div {
+    width: 700px;
+    padding-right: 80px;
+}
+
+#inicio div p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+#pontos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height: 350px;
+    background: #fff;
+}
+#pontos div {
+    width: 300px;
+}
+#pontos div h1 {
+    margin: 10px 0;
+    font-size: 30px;
+    color: black;
+}
+#pontos div p {
+    color:black;
+}
+#pontos div img {
+    width: 100px;
+    height: 100px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background: #fff;
+  color:black;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  #inicio img {
+      display: none;
   }
-  .footer {
-    background-color: #b8cc00;
-    color: #ffffff;
-    text-align: center;
-    font-size: 12px;
-    padding: 15px;
-    margin-top: 300px;
+}
+
+@media (max-width: 800px) {
+  header {
+      padding: 40px 40px 0 40px;
   }
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+  nav ul li {
+      padding: 0 10px;
+      list-style: none;
+      font-size: 18px; 
   }
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
+  #inicio {
+      padding: 10px 40px;
   }
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  #inicio div {
+      padding-right: 0px;
+  }
+  #inicio img {
+      display: none;
+  }
+  #pontos {
+      display: flex;
+      flex-direction: column;
+      height: 800px;
+      padding: 40px 0;
   }
